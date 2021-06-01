@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./.data/mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: la_shole
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    ports:
+    - 3306:3306
